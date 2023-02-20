@@ -1,30 +1,26 @@
 #include <stdio.h>
-/** 
- * main - The main function
- * Return: Always 0
+/**
+ * main - main function
+ * Return: 0 (Success)
  */
 int main(void)
 {
-	int i;
-	int j;
+	int num1;
+	int num2;
 
-	for (i = 0 ; i < 100; i++)
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		for (j = 0; i < 100 ; j++)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			if (i < j)
-			{ 
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
-				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i != 98 || j != 99)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+			if (num1 == 90 && num2 == 99)
+				continue;
+			putchar(' ');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
